@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core'
 import { Auth, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth'
 import { Router } from '@angular/router'
 import { MatFormFieldModule } from '@angular/material/form-field'
+import {
+  FormControl,
+  FormGroupDirective,
+  FormBuilder,
+  FormGroup,
+  NgForm,
+  Validators
+} from '@angular/forms'
 
 @Component({
   selector: 'app-login',
