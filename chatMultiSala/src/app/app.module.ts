@@ -19,10 +19,11 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatListModule } from '@angular/material/list'
 
 import { environment } from 'src/environments/environment'
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+import { SalaComponent } from './sala/sala.component'
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, SalaComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

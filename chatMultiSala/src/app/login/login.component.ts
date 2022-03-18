@@ -27,6 +27,6 @@ export class LoginComponent implements OnInit {
       new GoogleAuthProvider()
     )
     localStorage.setItem('usuario', JSON.stringify(credenciales.user))
-    this.router.navigateByUrl('chat')
+    this.router.navigateByUrl('sala')
   }
 }
