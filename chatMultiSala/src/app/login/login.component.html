@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="form-wraper">
+  <div class="form-container card">
+    <div class="form-header">
+      <img src=""  class="main-lock-icon" alt="">
+    </div>
+    <form >
+      <div class="form-body">
+        <mat-form-field class="justifier">
+            <input matInput placeholder="Email" type="email" class="form-input" name="email" required>
+        </mat-form-field>
+        <mat-form-field class="justifier">
+            <input matInput placeholder="Password" type="password" class="form-input" name="password" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-footer">
+          <button type="submit" mat-raised-button class="btn custom-btn">
+              <mat-icon>input</mat-icon> Login
+          </button>
+          <div class="txt">
+            OR
+          </div>
+          <button mat-raised-button class="btn" (click)="loginGoogle()">
+            <img src="" alt="" class="google-icon"> Login With Google
+          </button>
+      </div>
+    </form>
+    <div class="additional-link">
+      <a routerLink="/signup">No Account? <strong>Create one here</strong></a>
+    </div>
+  </div>
+</div>
