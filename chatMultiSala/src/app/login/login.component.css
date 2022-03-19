@@ -16,11 +16,10 @@ body {
 }
 .form-container {
   position: absolute;
-  top: 20%;
-  margin-left: 30%;
-
   width: 35%;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding-bottom: 24px !important;
   display: block;
   background: rgb(253, 253, 253);
