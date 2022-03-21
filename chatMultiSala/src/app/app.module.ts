@@ -21,6 +21,7 @@ import { MatListModule } from '@angular/material/list'
 import { environment } from 'src/environments/environment'
 import { AppRoutingModule } from './app-routing.module';
 import { SalaComponent } from './sala/sala.component'
+import { ConfirmationService } from 'primeng/api'
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SalaComponent],
@@ -39,7 +40,7 @@ import { SalaComponent } from './sala/sala.component'
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth())
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
