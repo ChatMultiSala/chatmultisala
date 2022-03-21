@@ -59,22 +59,36 @@ body {
 /** form footer **/
 .form-footer {
   padding: 24px;
+  display: block;
+  width: 100%∫;
 }
 .btn {
-  display: block;
-  width: 100%;
-  padding: 5% !important;
+  width: 48%;
+  padding: 3% !important;
   font-size: 1.5em;
   font-weight: 200;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 .custom-btn {
   margin-bottom: 15px;
-  background: #3f51b5;
+  background: #1e8000;
   color: #fff;
 }
+
+.custom-btn2 {
+  margin-bottom: 15px;
+  background: #d15e00;
+  color: #fff;
+}
+
+.custom-btn3 {
+  margin-bottom: 15px;
+  background: #868686;
+  color: #fff;
+}
+
 .google-icon {
-  width: 6%;
+  width: 15%;
 }
 .txt {
   text-align: center;
@@ -86,6 +100,7 @@ body {
   text-align: center;
 }
 a {
+  font-size: 1.5em;
   text-decoration: none;
   color: rgb(42, 125, 219);
 }
