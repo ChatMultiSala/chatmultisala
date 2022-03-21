@@ -16,16 +16,14 @@
         <button type="submit" mat-raised-button class="btn custom-btn">
             <mat-icon>input</mat-icon> Login
         </button>
-        <div class="txt">
           O
-        </div>
-        <button mat-raised-button class="btn" (click)="loginGoogle()">
-          <img src="" alt="" class="google-icon"> Login con Google
+        <button mat-raised-button class="btn custom-btn3" (click)="loginGoogle()">
+          <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="google-icon"> Login con Google
         </button>
     </div>
   </form>
   <div class="additional-link">
-    <a routerLink="/signup">No tienes cuenta? <strong>Crea una aqui</strong></a>
+    <a routerLink="/signup">Si aún no tienes cuenta <strong>Create una...</strong></a>
 
     <mat-form-field class="justifier">
       <input matInput placeholder="Email" type="text" id="email1" class="form-input" name="newUser" [(ngModel)]="newUser" required/>
@@ -35,8 +33,8 @@
       <input matInput placeholder="Password" type="password" id="password1" class="form-input" name="newPassword" [(ngModel)]="newPassword" required/>
     </mat-form-field>
 
-    <button mat-raised-button class="custom-btn" (click)="signUp()">
-      <img src="" alt="" class="">Crear cuenta
+    <button mat-raised-button class="btn custom-btn2" (click)="signUp()">
+      <mat-icon>account_circle</mat-icon> Crear cuenta
     </button>
 
   </div>
