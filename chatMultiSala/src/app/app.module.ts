@@ -21,10 +21,11 @@ import { MatListModule } from '@angular/material/list'
 import { environment } from 'src/environments/environment'
 import { AppRoutingModule } from './app-routing.module';
 import { SalaComponent } from './sala/sala.component'
-import { ConfirmationService } from 'primeng/api'
+import { ConfirmationService } from 'primeng/api';
+import { ChatComponent } from './chat/chat.component'
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SalaComponent],
+  declarations: [AppComponent, LoginComponent, SalaComponent, ChatComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

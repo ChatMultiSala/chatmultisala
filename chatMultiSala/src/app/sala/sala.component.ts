@@ -1,5 +1,6 @@
+import { ChatService } from './../chat.service'
+import { IMensaje } from './mensaje.interface'
 import { ISala } from './salas.interface'
-import{Imensa}
 import { Component, OnInit } from '@angular/core'
 import { SalasService } from '../salas.service'
 import { MatSidenavModule } from '@angular/material/sidenav'
@@ -20,14 +21,22 @@ export class SalaComponent implements OnInit {
   }
 
   salas: ISala[] = []
-  mensajes: IMensajes = {
-    idsala: '',
-    nombre: ''
+  mensaje: IMensaje = {
+    idSala: '',
+    id: '',
+    usuario: '',
+    contraseña: '',
+    avatar: '',
+    texto: '',
+    fechaHora: ''
   }
 
-  mensajes: IMensajes[] = []
+  mensajes: IMensaje[] = []
 
-  constructor (private salasService: SalasService) {}
+  constructor (
+    private salasService: SalasService,
+    private chatService: ChatService
+  ) {}
 
   ngOnInit (): void {
     this.getSalas()
@@ -40,10 +49,10 @@ export class SalaComponent implements OnInit {
     })
   }
   getMensajes (sala: ISala) {
-    this.idsala = sala.id
-    this.mensajesService
-      .getMensajes(this.idsala)
-      .subscribe((productos: IMensajes[]) => {
+    this.sala = sala
+    this.chatService
+      .getMensajes(this.sala.id)
+      .subscribe((mensajes: IMensaje[]) => {
         this.mensajes = mensajes
       })
   }

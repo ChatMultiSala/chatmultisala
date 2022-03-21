@@ -1,3 +1,4 @@
+import { IMensaje } from './sala/mensaje.interface'
 import { Injectable } from '@angular/core'
 import {
   Firestore,
