@@ -1,1 +1,5 @@
-<p>Bienvenido a la sala</p>
+
+  <mat-nav-list>
+    <a mat-list-item  *ngFor="let sala of salas" [routerLink]=""> {{sala.nombre}}</a>
+  </mat-nav-list>
+
