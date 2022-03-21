@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatListModule } from '@angular/material/list'
+import { SalaComponent } from './sala/sala.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
