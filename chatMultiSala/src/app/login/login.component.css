@@ -9,17 +9,24 @@ body {
   bottom: 20px;
 }
 
+.titulo {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+}
+
+
 /** form **/
 .form-wraper {
   width: 100%;
   /*position: relative;*/
 }
 .form-container {
-  /*position: absolute;
+  position: absolute;
   width: 35%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);*/
+  transform: translate(-50%, -50%);
   padding-bottom: 24px !important;
   display: block;
   background: rgb(253, 253, 253);
@@ -99,7 +106,7 @@ body {
   padding: 10px auto;
   text-align: center;
 }
-a {
+.subtitulo {
   font-size: 1.5em;
   text-decoration: none;
   color: rgb(42, 125, 219);
