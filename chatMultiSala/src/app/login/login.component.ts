@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core'
-import { Auth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth'
-import { ConfirmationService } from 'primeng/api';
+import {
+  Auth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
+} from '@angular/fire/auth'
+import { ConfirmationService } from 'primeng/api'
 import { Router } from '@angular/router'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import {
@@ -18,14 +24,15 @@ import {
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: string = '';
-  password: string = '';
-  newUser: string = '';
-  newPassword: string = '';
+  user: string = ''
+  password: string = ''
+  newUser: string = ''
+  newPassword: string = ''
   constructor (
     private fireAuth: Auth,
     private router: Router,
-    private confirmationService: ConfirmationService) {}
+    private confirmationService: ConfirmationService
+  ) {}
 
   ngOnInit (): void {}
 
@@ -38,35 +45,39 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('sala')
   }
 
-  async login() {
+  async login () {
     try {
-      await signInWithEmailAndPassword(this.fireAuth, this.user, this.password);
-      this.router.navigateByUrl('datos');
-    } catch (error: any) {
-      console.log(error);
+      await signInWithEmailAndPassword(this.fireAuth, this.user, this.password)
+      this.router.navigateByUrl('sala')
+    } catch (error) {
+      console.log(error)
       this.confirmationService.confirm({
         message: 'Usuario y/o contraseña erróneos',
         header: 'Error',
         icon: 'pi pi-exclamation-triangle'
-      });
+      })
     }
   }
 
-  async signUp() {
+  async signUp () {
     try {
-      await createUserWithEmailAndPassword(this.fireAuth, this.newUser, this.newPassword);
+      await createUserWithEmailAndPassword(
+        this.fireAuth,
+        this.newUser,
+        this.newPassword
+      )
       this.confirmationService.confirm({
         message: 'Usuario creado con éxito',
         header: 'Ok',
         icon: 'pi pi-exclamation-triangle'
-      });
-    } catch (error: any) {
-      console.log(error);
+      })
+    } catch (error) {
+      console.log(error)
       this.confirmationService.confirm({
         message: 'Usuario y/o contraseña erróneos',
         header: 'Error',
         icon: 'pi pi-exclamation-triangle'
-      });
+      })
     }
   }
 }

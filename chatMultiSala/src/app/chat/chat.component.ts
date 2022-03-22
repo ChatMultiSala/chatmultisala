@@ -1,11 +1,9 @@
-import { MatToolbarModule } from '@angular/material/toolbar'
 import { IMensaje } from './../sala/mensaje.interface'
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 import { Auth, User } from '@angular/fire/auth'
 import { ChatService } from '../chat.service'
-import { MatIcon } from '@angular/material/icon'
-import { MatIconModule } from '@angular/material/icon'
+
 import {
   FormControl,
   FormGroupDirective,
@@ -36,28 +34,16 @@ export class ChatComponent implements OnInit {
     if (!this.usuario) {
       this.router.navigateByUrl('login')
     }
-    this.getMensajes()
-  }
-
-  getMensajes () {
-    this.chatService.getMensajes().subscribe((mensajes: IMensaje[]) => {
-      this.mensajes = mensajes
-    })
-  }
-
-  logout () {
-    this.fireAuth.signOut()
-    this.router.navigateByUrl('/login')
   }
 
   async enviarMensaje () {
+    console.log(this.usuario)
     const mensaje: IMensaje = {
-      usuario: this.usuario.displayName!,
+      usuario: this.usuario.email!,
       texto: this.textoMensaje,
       avatar: this.usuario.photoURL!,
       fechaHora: new Date(),
-      idSala: '',
-      contraseña: ''
+      idSala: this.chatService.salactiva.id
     }
     await this.chatService.addMensaje(mensaje)
     this.textoMensaje = ''
