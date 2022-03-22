@@ -1,34 +1,32 @@
-<<<<<<< HEAD
 <div class="container">
   <div class="row">
     <div class="col-4">
-    <h2 class="titulo">SALAS</h2>
+
+      <h2 class="titulo">SALAS</h2>
       <mat-nav-list class="">
       <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class=""> {{sala.nombre  | uppercase}}</mat-list-item>
+      </mat-nav-list><br>
+
+      <li (click)="getMensajes(sala)" *ngFor="let sala of salas; let indice=index;" class="" style="--clr:#00ade1">
+      <a href="#" data-text="&nbsp;{{sala.nombre}}">&nbsp;{{sala.nombre}}&nbsp;</a>
+      {{sala.nombre  | uppercase}}</li>
+
+    </div>
+
+    <div class="col-4">
+      <mat-nav-list>
+      <h1 class="titulosala">{{sala.nombre | uppercase }}</h1>
+      <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
       </mat-nav-list>
     </div>
 
     <div class="col-4">
-      <li (click)="getMensajes(sala)" *ngFor="let sala of salas; let indice=index;" class="" style="--clr:#00ade1">
-      <a href="#" data-text="&nbsp;{{sala.nombre}}">&nbsp;{{sala.nombre}}&nbsp;</a>
-      {{sala.nombre  | uppercase}}</li>
+      <div>
+        <app-chat></app-chat>
+      </div>
     </div>
-
   </div>
-=======
-<div>
-  <mat-nav-list>
-    <mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas">  {{sala.nombre}}</mat-list-item>
 
-  </mat-nav-list>
->>>>>>> ecb28cea71996c7e5c4b683e099130ba5ac7c2f9
 </div>
-<div>
-  <mat-nav-list>
-    <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
 
-  </mat-nav-list>
-</div>
-<div>
-  <app-chat></app-chat>
-</div>
+
