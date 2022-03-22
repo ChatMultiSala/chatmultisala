@@ -1,7 +1,6 @@
-
 <div class="container">
-<h2 class="titulo">SALAS</h2>
+  <h2 class="titulo">SALAS</h2>
   <mat-nav-list class="salas">
-    <button mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas" class="nombresala"> {{sala.nombre  | uppercase}}</button>
+    <button mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas" id="but[i]" class="nombresala"> {{sala.nombre  | uppercase}}</button>
   </mat-nav-list>
 </div>
