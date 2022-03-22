@@ -1,44 +1,53 @@
-<div class="form-container card">
-  <div class="form-header">
-    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/bubble-chat-4349592-3611993.png"  class="main-lock-icon" alt="">
-    <h1 class="titulo">CHAT MULTI SALA</h1>
-  </div>
+  <div class="container">
+    <div class="row">
 
-  <form >
-    <div class="form-body">
-      <mat-form-field class="justifier">
-          <input matInput placeholder="Email" type="email" class="form-input" name="email" required>
-      </mat-form-field>
-      <mat-form-field class="justifier">
-          <input matInput placeholder="Password" type="password" class="form-input" name="password" required>
-      </mat-form-field>
+      <div class="col-3">
+      </div>
+
+      <div class="col-6">
+        <div class="form-header">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/bubble-chat-4349592-3611993.png"  class="main-lock-icon" alt="">
+          <h1 class="titulo">CHAT MULTI SALA</h1>
+        </div>
+        <form >
+          <div class="form-body">
+            <mat-form-field class="justifier">
+                <input matInput placeholder="Email" type="email" class="form-input" name="email" required>
+            </mat-form-field>
+            <mat-form-field class="justifier">
+                <input matInput placeholder="Password" type="password" class="form-input" name="password" required>
+            </mat-form-field>
+          </div>
+
+          <div class="form-footer">
+              <button type="submit" mat-raised-button class="btn custom-btn">
+                  <mat-icon>input</mat-icon> Login
+              </button>
+                O
+              <button type="submit" mat-raised-button class="btn custom-btn3" (click)="loginGoogle()">
+                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="google-icon"> Login con Google
+              </button>
+          </div>
+        </form>
+        <div class="additional-link">
+
+        <h2>Si aún no tienes cuenta, create una...</h2>
+
+          <mat-form-field class="justifier">
+            <input matInput placeholder="Email" type="text" id="email1" class="form-input" name="newUser" [(ngModel)]="newUser" required/>
+          </mat-form-field>
+
+          <mat-form-field class="justifier">
+            <input matInput placeholder="Password" type="password" id="password1" class="form-input" name="newPassword" [(ngModel)]="newPassword" required/>
+          </mat-form-field>
+
+          <button mat-raised-button class="btn custom-btn2" (click)="signUp()">
+            <mat-icon>account_circle</mat-icon> Crear cuenta
+          </button>
+        </div>
+      </div>
+
+      <div class="col-3">
+      </div>
     </div>
-
-    <div class="form-footer">
-        <button type="submit" mat-raised-button class="btn custom-btn">
-            <mat-icon>input</mat-icon> Login
-        </button>
-          O
-        <button mat-raised-button class="btn custom-btn3" (click)="loginGoogle()">
-          <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="google-icon"> Login con Google
-        </button>
-    </div>
-  </form>
-  <div class="additional-link">
-    <!-- <a routerLink="/signup">Si aún no tienes cuenta <strong>Create una...</strong></a> -->
-    <h2>Si aún no tienes cuenta, create una...</h2>
-
-    <mat-form-field class="justifier">
-      <input matInput placeholder="Email" type="text" id="email1" class="form-input" name="newUser" [(ngModel)]="newUser" required/>
-    </mat-form-field>
-
-    <mat-form-field class="justifier">
-      <input matInput placeholder="Password" type="password" id="password1" class="form-input" name="newPassword" [(ngModel)]="newPassword" required/>
-    </mat-form-field>
-
-    <button mat-raised-button class="btn custom-btn2" (click)="signUp()">
-      <mat-icon>account_circle</mat-icon> Crear cuenta
-    </button>
-
-  </div>
-  </div>
+</div>
