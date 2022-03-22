@@ -13,15 +13,15 @@
       <form class="gradient-border" id="box">
         <div class="form-body">
           <mat-form-field class="justifier1">
-              <input matInput placeholder="Email" type="email" class="form-input" name="email" required>
+              <input matInput placeholder="Email" type="email" [(ngModel)]="user" class="form-input" name="email" required>
           </mat-form-field>
           <mat-form-field class="justifier2">
-              <input matInput placeholder="Password" type="password" class="form-input" name="password" required>
+              <input matInput placeholder="Password" type="password" [(ngModel)]="password" class="form-input" name="password" required>
           </mat-form-field>
         </div>
 
         <div class="form-footer">
-            <button type="submit" mat-raised-button class="btn custom-btn">
+            <button type="submit" mat-raised-button class="btn custom-btn" (click)= "login()"  >
                 <mat-icon>input</mat-icon> Login
             </button>
               O
