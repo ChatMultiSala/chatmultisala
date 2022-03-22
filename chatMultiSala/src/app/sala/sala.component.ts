@@ -26,7 +26,6 @@ export class SalaComponent implements OnInit {
     idSala: '',
     id: '',
     usuario: '',
-    contraseña: '',
     avatar: '',
     texto: '',
     fechaHora: ''
@@ -50,10 +49,13 @@ export class SalaComponent implements OnInit {
     })
   }
   getMensajes (sala: ISala) {
+    console.log(sala)
     this.sala = sala
+    this.chatService.salactiva = sala
     this.chatService
       .getMensajes(this.sala.id)
       .subscribe((mensajes: IMensaje[]) => {
+        console.log(mensajes)
         this.mensajes = mensajes
       })
   }

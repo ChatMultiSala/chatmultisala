@@ -16,6 +16,7 @@ import { ISala } from './sala/salas.interface'
   providedIn: 'root'
 })
 export class ChatService {
+  salactiva!: ISala
   constructor (private firestore: Firestore) {}
 
   /* getMensajes (): Observable<IMensaje[]> {
@@ -29,6 +30,7 @@ export class ChatService {
   }
   getMensajes (idSala?: string): Observable<IMensaje[]> {
     const mensajes = collection(this.firestore, 'mensajes')
+    console.log(mensajes)
     const mensajeSala = query(mensajes, where('idSala', '==', idSala))
     return collectionData(mensajeSala, { idField: 'id' }) as Observable<
       IMensaje[]

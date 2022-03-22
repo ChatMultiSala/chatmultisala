@@ -1,11 +1,6 @@
-
 <mat-toolbar color="primary">
   <span>Chat</span>
   <span class="example-spacer"></span>
-
-  <button mat-mini-fab title="Cerrar sesión" (click)="logout()" class="cerrar-sesion">
-    <mat-icon>directions_run</mat-icon>
-  </button>
 </mat-toolbar>
 <div class="form-container">
   <h1 style="font-family: Calibri">Bienvenido, {{ usuario?.displayName }}</h1>
@@ -25,22 +20,7 @@
     <mat-divider></mat-divider>
     <img mat-card-image src="" />
     <mat-card-content>
-      <mat-list>
-        <h3 mat-subheader>Mensajes</h3>
-        <div *ngFor="let mensaje of mensajes">
-          <mat-list-item>
-            <div
-              mat-card-avatar
-              class="example-header-image"
-              [style.background-image]="'url(' + mensaje.avatar + ')'"
-            ></div>
-            <h4 mat-line>{{ mensaje.usuario }}</h4>
-            <p mat-line>{{ mensaje.texto }}</p>
-            <p mat-line>{{ mensaje.fechaHora.seconds * 1000 | date: 'dd/MM/yyyy HH:mm' }}</p>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-        </div>
-      </mat-list>
+
     </mat-card-content>
     <mat-card-actions>
       <mat-form-field class="example-full-width">

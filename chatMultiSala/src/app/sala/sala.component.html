@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <div class="row">
     <div class="col-4">
@@ -14,4 +15,20 @@
     </div>
 
   </div>
+=======
+<div>
+  <mat-nav-list>
+    <mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas">  {{sala.nombre}}</mat-list-item>
+
+  </mat-nav-list>
+>>>>>>> ecb28cea71996c7e5c4b683e099130ba5ac7c2f9
+</div>
+<div>
+  <mat-nav-list>
+    <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
+
+  </mat-nav-list>
+</div>
+<div>
+  <app-chat></app-chat>
 </div>
