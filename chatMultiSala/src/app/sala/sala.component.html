@@ -1,16 +1,31 @@
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-4 columna1">
 
       <h2 class="titulo">SALAS</h2>
       <mat-nav-list class="">
-      <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class=""> {{sala.nombre  | uppercase}}</mat-list-item>
+      <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class="salas"> {{sala.nombre  | uppercase}}</mat-list-item>
       </mat-nav-list><br>
 
-      <li (click)="getMensajes(sala)" *ngFor="let sala of salas; let indice=index;" class="" style="--clr:#00ade1">
-      <a href="#" data-text="&nbsp;{{sala.nombre}}">&nbsp;{{sala.nombre}}&nbsp;</a>
-      {{sala.nombre  | uppercase}}</li>
-
+      <ul>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#00ade1">
+        <a href="#" data-text="&nbsp;ADMINISTRACIÓN">&nbsp;ADMINISTRACIÓN&nbsp;</a>
+        </li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#ffdd1c">
+        <a href="#" data-text="&nbsp;EDUCACIÓN">&nbsp;EDUCACIÓN&nbsp;</a>
+        </li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#dc00d4">
+        <a href="#" data-text="&nbsp;SANIDAD">&nbsp;SANIDAD&nbsp;</a>
+        </li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#00dc82">
+        <a href="#" data-text="&nbsp;SERVICIOS">&nbsp;SERVICIOS&nbsp;</a></li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#ffdd1c">
+        <a href="#" data-text="&nbsp;INFORMÁTICA">&nbsp;INFORMÁTICA&nbsp;</a></li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#dc00d4">
+        <a href="#" data-text="&nbsp;BIENVENIDA">&nbsp;BIENVENIDA&nbsp;</a></li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#00ade1">
+        <a href="#" data-text="&nbsp;ARQUITECTURA">&nbsp;ARQUITECTURA&nbsp;</a></li>
+      </ul>
     </div>
 
     <div class="col-4">
