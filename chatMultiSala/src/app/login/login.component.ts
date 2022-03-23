@@ -9,7 +9,6 @@ import {
   signInWithEmailAndPassword
 } from '@angular/fire/auth'
 import { ConfirmationService } from 'primeng/api'
-import swal from 'sweetalert2'
 import { Router } from '@angular/router'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import {
@@ -36,6 +35,7 @@ export class LoginComponent implements OnInit {
     private fireAuth: Auth,
     private router: Router,
     private confirmationService: ConfirmationService,
+    private usuariosService: UsuariosService,
     private temasService: TemasService
   ) {}
 

@@ -1,10 +1,9 @@
-
 <div class="row">
   <div class="col">
-
-        <ul *ngFor="let usuario of usuarios">
-          <li>{{ user.id }}</li>
-          <li>{{ user.email }}</li>
-
-        </ul>
+    <table class="table">
+        <tr *ngFor="let usuario of usuarios" >
+          <td [class.online]="usuario.online">{{ usuario.email  }}</td>
+        </tr>
+    </table>
   </div>
+</div>
