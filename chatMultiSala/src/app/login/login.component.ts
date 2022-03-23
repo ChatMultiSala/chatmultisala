@@ -9,6 +9,7 @@ import {
   signInWithEmailAndPassword
 } from '@angular/fire/auth'
 import { ConfirmationService } from 'primeng/api'
+import swal from 'sweetalert2'
 import { Router } from '@angular/router'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import {
@@ -19,6 +20,7 @@ import {
   NgForm,
   Validators
 } from '@angular/forms'
+import { TemasService } from '../temas.service'
 
 @Component({
   selector: 'app-login',
@@ -34,7 +36,7 @@ export class LoginComponent implements OnInit {
     private fireAuth: Auth,
     private router: Router,
     private confirmationService: ConfirmationService,
-    private usuariosService: UsuariosService
+    private temasService: TemasService
   ) {}
 
   ngOnInit (): void {}
@@ -98,5 +100,9 @@ export class LoginComponent implements OnInit {
         icon: 'pi pi-exclamation-triangle'
       })
     }
+  }
+
+  changeTheme (theme: string) {
+    this.temasService.switchTheme(theme)
   }
 }

@@ -28,3 +28,12 @@ mat-list-item {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.titulo2 {
+  margin-top: 5%;
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  background-color: antiquewhite;
+}

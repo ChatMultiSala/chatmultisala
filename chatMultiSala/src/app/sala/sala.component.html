@@ -1,34 +1,36 @@
 <div class="container">
   <div class="row">
-
-
-
-  </div>
-  <div class="row">
-    <div class="col-4">
+    <div class="col-4 columna1">
 
       <h2 class="titulo">SALAS</h2>
-      <mat-nav-list class="">
-        <button  title="Cerrar sesión" (click)="logout()" class="cerrar-sesion">
-        </button>
-      <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class=""> {{sala.nombre  | uppercase}}</mat-list-item>
-      </mat-nav-list><br>
+     <!--  <mat-nav-list class="">
+      <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class="salas"> {{sala.nombre  | uppercase}}</mat-list-item>
+      </mat-nav-list><br> -->
 
-      <li (click)="getMensajes(sala)" *ngFor="let sala of salas; let indice=index;" class="" style="--clr:#00ade1">
-      <a href="#" data-text="&nbsp;{{sala.nombre}}">&nbsp;{{sala.nombre}}&nbsp;</a>
-      {{sala.nombre  | uppercase}}</li>
+      <ul>
+        <li *ngFor="let sala of salas; item in relleno" (click)="getMensajes(sala)" class="" [style]="sala.style">
+        <a data-text ="item" >&nbsp;{{sala.nombre}}&nbsp;</a>
+        </li>
 
+        <li (click)="getMensajes(sala)" class="" style="--clr:#dc00d4">
+        <a href="#" data-text="&nbsp;BIENVENIDA">&nbsp;BIENVENIDA&nbsp;</a></li>
+        <li (click)="getMensajes(sala)" class="" style="--clr:#00ade1">
+        <a href="#" data-text="&nbsp;ARQUITECTURA">&nbsp;ARQUITECTURA&nbsp;</a></li>
+      </ul>
     </div>
 
-    <div class="col-4">
+    <div class="col-4 columna2">
       <mat-nav-list>
       <h1 class="titulosala">{{sala.nombre | uppercase }}</h1>
       <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
       </mat-nav-list>
     </div>
 
-    <div class="col-4">
-      <div>
+    <div class="col-4 columna3">
+      <div class="conectados">
+        <h1 class="titulo2" >Usuarios conectados</h1>
+      </div>
+      <div class="chat">
         <app-chat></app-chat>
       </div>
     </div>

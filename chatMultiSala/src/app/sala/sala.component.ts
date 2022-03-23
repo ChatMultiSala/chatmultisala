@@ -20,9 +20,12 @@ import { IUser } from '../usuarios/user.interface'
 export class SalaComponent implements OnInit {
   sala: ISala = {
     id: '',
-    nombre: ''
+    nombre: '',
+    style:""
   }
   usuario!: User
+
+  relleno: string[]=["&nbsp;ADMINISTRACIÓN", "&nbsp;EDUCACIÓN", "&nbsp;SANIDAD", "&nbsp;SERVICIOS"];
 
   salas: ISala[] = []
   mensaje: IMensaje = {
