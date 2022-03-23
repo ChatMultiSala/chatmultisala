@@ -83,8 +83,4 @@ export class LoginComponent implements OnInit {
       })
     }
   }
-
-  changeTheme(theme: string) {
-    this.temasService.switchTheme(theme);
-  }
 }
