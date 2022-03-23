@@ -1,3 +1,4 @@
+import { UsuariosService } from './../usuarios.service'
 import { ChatService } from './../chat.service'
 import { IMensaje } from './mensaje.interface'
 import { ISala } from './salas.interface'
@@ -9,6 +10,7 @@ import { MatNavList } from '@angular/material/list'
 import { Router } from '@angular/router'
 import { Auth, User } from '@angular/fire/auth'
 import { NgModule } from '@angular/core'
+import { IUser } from '../usuarios/user.interface'
 
 @Component({
   selector: 'app-sala',
@@ -20,6 +22,7 @@ export class SalaComponent implements OnInit {
     id: '',
     nombre: ''
   }
+  usuario!: User
 
   salas: ISala[] = []
   mensaje: IMensaje = {
@@ -35,11 +38,15 @@ export class SalaComponent implements OnInit {
 
   constructor (
     private salasService: SalasService,
-    private chatService: ChatService
+    private chatService: ChatService,
+    private fireAuth: Auth,
+    private router: Router,
+    private usuariosService: UsuariosService
   ) {}
 
   ngOnInit (): void {
     this.getSalas()
+    this.usuario = this.fireAuth.currentUser!
   }
 
   getSalas () {
@@ -58,5 +65,15 @@ export class SalaComponent implements OnInit {
         console.log(mensajes)
         this.mensajes = mensajes
       })
+  }
+  logout () {
+    const usuario: IUser = {
+      displayName: this.usuario.displayName || '',
+      email: this.usuario.email || '',
+      online: false
+    }
+    this.usuariosService.updateUsuarios(usuario)
+    this.fireAuth.signOut()
+    this.router.navigateByUrl('/login')
   }
 }

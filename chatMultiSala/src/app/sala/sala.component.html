@@ -1,9 +1,16 @@
 <div class="container">
   <div class="row">
+
+
+
+  </div>
+  <div class="row">
     <div class="col-4">
 
       <h2 class="titulo">SALAS</h2>
       <mat-nav-list class="">
+        <button  title="Cerrar sesión" (click)="logout()" class="cerrar-sesion">
+        </button>
       <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class=""> {{sala.nombre  | uppercase}}</mat-list-item>
       </mat-nav-list><br>
 
@@ -26,7 +33,7 @@
       </div>
     </div>
   </div>
-
+  <app-usuarios></app-usuarios>
 </div>
 
 

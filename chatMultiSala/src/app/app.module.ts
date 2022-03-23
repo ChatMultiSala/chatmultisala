@@ -20,10 +20,11 @@ import { environment } from 'src/environments/environment'
 import { AppRoutingModule } from './app-routing.module'
 import { SalaComponent } from './sala/sala.component'
 import { ConfirmationService } from 'primeng/api'
-import { MatDividerModule } from '@angular/material/divider'
+import { MatDividerModule } from '@angular/material/divider';
+import { UsuariosComponent } from './usuarios/usuarios.component'
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SalaComponent, ChatComponent],
+  declarations: [AppComponent, LoginComponent, SalaComponent, ChatComponent, UsuariosComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

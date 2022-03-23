@@ -1,3 +1,5 @@
+import { UsuariosService } from './../usuarios.service'
+import { IUser } from './../usuarios/user.interface'
 import { Component, OnInit } from '@angular/core'
 import {
   Auth,
@@ -31,7 +33,8 @@ export class LoginComponent implements OnInit {
   constructor (
     private fireAuth: Auth,
     private router: Router,
-    private confirmationService: ConfirmationService
+    private confirmationService: ConfirmationService,
+    private usuariosService: UsuariosService
   ) {}
 
   ngOnInit (): void {}
@@ -41,13 +44,29 @@ export class LoginComponent implements OnInit {
       this.fireAuth,
       new GoogleAuthProvider()
     )
+    const usuario: IUser = {
+      displayName: credenciales.user.displayName || '',
+      email: credenciales.user.email || '',
+      online: true
+    }
+    this.usuariosService.updateUsuarios(usuario)
     localStorage.setItem('usuario', JSON.stringify(credenciales.user))
     this.router.navigateByUrl('sala')
   }
 
   async login () {
     try {
-      await signInWithEmailAndPassword(this.fireAuth, this.user, this.password)
+      const credenciales = await signInWithEmailAndPassword(
+        this.fireAuth,
+        this.user,
+        this.password
+      )
+      const usuario: IUser = {
+        displayName: credenciales.user.displayName || '',
+        email: credenciales.user.email || '',
+        online: true
+      }
+      this.usuariosService.updateUsuarios(usuario)
       this.router.navigateByUrl('sala')
     } catch (error) {
       console.log(error)
