@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "primeng": "^13.3.0",
     "sweetalert2": "^11.4.6"
   }
 }

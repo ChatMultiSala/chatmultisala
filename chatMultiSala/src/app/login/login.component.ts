@@ -18,6 +18,7 @@ import {
   NgForm,
   Validators
 } from '@angular/forms'
+import { TemasService } from '../temas.service';
 
 @Component({
   selector: 'app-login',
@@ -32,7 +33,8 @@ export class LoginComponent implements OnInit {
   constructor (
     private fireAuth: Auth,
     private router: Router,
-    private confirmationService: ConfirmationService
+    private confirmationService: ConfirmationService,
+    private temasService: TemasService
   ) {}
 
   ngOnInit (): void {}
@@ -80,5 +82,9 @@ export class LoginComponent implements OnInit {
         icon: 'pi pi-exclamation-triangle'
       })
     }
+  }
+
+  changeTheme(theme: string) {
+    this.temasService.switchTheme(theme);
   }
 }
