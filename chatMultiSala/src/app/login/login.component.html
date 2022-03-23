@@ -1,23 +1,14 @@
 <div class="container-fluid">
   <div class="row">
 
+    <form class="mode">
+      <input id="dark-mode" class="toggle" type="checkbox" name="Dark mode" role="switch" value="on">
+      <label for="dark-mode" class="sr">Dark Mode</label>
+      <div class="curtain"></div>
+    </form>
+
     <div class="col-2 columna1">
-      <h1>Cambiar aspecto del chat</h1>
-        <ul class="-style-type lista: none;">
-          <li><a class="opcionestema">
-            <img src="assets/images/themes/saga-blue.png" width="50" />
-          </a></li>
-          <li><a class="opcionestema">
-            <img src="assets/images/themes/md-dark-indigo.svg" width="50" />
-          </a></li>
-          <li><a class="opcionestema">
-            <img src="assets/images/themes/bootstrap4-light-purple.svg" width="50" />
-          </a></li>
-          <li><a class="opcionestema">
-            <img src="assets/images/themes/bootstrap4-dark-purple.svg" width="50" />
-          </a></li>
-        </ul>
-    </div>
+     </div>
 
     <div class="col-8">
       <div class="form-header">
@@ -46,38 +37,33 @@
               </mat-form-field>
               </div> -->
 
-        <div class="form-footer">
+        <div class="form-footer row g-2">
+          <div class="col-md">
             <button type="submit" mat-raised-button class="btn custom-btn" (click)= "login()"  >
                 <mat-icon>input</mat-icon> Login
             </button>
-              O
+            </div>
+              <br><br>O
+          <div class="col-md">
             <button type="submit" mat-raised-button class="btn custom-btn3" (click)="loginGoogle()">
-              <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="google-icon"> Login con Google
+            <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="google-icon"> Login con Google
             </button>
+          </div>
         </div>
 
-      <div class="additional-link formu2">
       <p class="hazteuna">¿Aún no tienes cuenta? ¡Create una!</p>
 
       <div class="row g-2">
-      <div class="form-floating mb-3 justifier1">
+        <div class="form-floating col-md ">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="newUser" [(ngModel)]="newUser" required>
         <label for="floatingInput">Email</label>
-      </div>
+        </div>
 
-      <div class="form-floating justifier2">
+        <div class="form-floating col-md">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="newPassword" [(ngModel)]="newPassword" required>
         <label for="floatingPassword">Password</label>
+        </div>
       </div>
-    </div>
-
-      <!--   <mat-form-field class="justifier1">
-          <input matInput placeholder="Email" type="text" id="email1" class="form-input" name="newUser" [(ngModel)]="newUser" required/>
-        </mat-form-field>
-
-        <mat-form-field class="justifier2">
-          <input matInput placeholder="Password" type="password" id="password1" class="form-input" name="newPassword" [(ngModel)]="newPassword" required/>
-        </mat-form-field> -->
 
         <button mat-raised-button class="btn custom-btn2" (click)="signUp()">
           <mat-icon>account_circle</mat-icon> Crear cuenta

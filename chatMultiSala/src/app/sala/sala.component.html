@@ -14,16 +14,29 @@
 
         <li (click)="getMensajes(sala)" class="" style="--clr:#dc00d4">
         <a href="#" data-text="&nbsp;BIENVENIDA">&nbsp;BIENVENIDA&nbsp;</a></li>
-        <li (click)="getMensajes(sala)" class="" style="--clr:#00ade1">
-        <a href="#" data-text="&nbsp;ARQUITECTURA">&nbsp;ARQUITECTURA&nbsp;</a></li>
       </ul>
     </div>
 
     <div class="col-4 columna2">
-      <mat-nav-list>
-      <h1 class="titulosala">{{sala.nombre | uppercase }}</h1>
-      <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
-      </mat-nav-list>
+      <div class="row">
+        <div class="col-md">
+        <form class="mode">
+          <input id="dark-mode" class="toggle2" type="checkbox" name="Dark mode" role="switch" value="on">
+          <label for="dark-mode" class="sr">Dark Mode</label>
+          <div class="curtain"></div>
+        </form>
+        </div>
+
+        <div class="col-md">
+
+        </div>
+
+        <mat-nav-list>
+          <p class="titulosala">{{sala.nombre | uppercase }}</p>
+          <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
+        </mat-nav-list>
+
+      </div>
     </div>
 
     <div class="col-4 columna3">

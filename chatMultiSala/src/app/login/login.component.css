@@ -54,7 +54,7 @@
 
 .justifier2 {
   width: 40%;
-  margin-left: 5%;
+  margin-left: 10%;
   margin-right: 5%;
 }
 
@@ -68,10 +68,15 @@
   width: 100%∫;
 }
 
+.input {
+    width: 100%;
+    font-size: 1em;
+}
+
 .btn {
-  width: 48%;
+  width: 100%;
   padding: 3% !important;
-  font-size: 1.5em;
+  font-size: 0.8em;
   font-weight: 200;
   margin-top: 15px;
 }
@@ -95,7 +100,7 @@
 }
 
 .google-icon {
-  width: 10%;
+  width: 7%;
 }
 
 .txt {
@@ -114,9 +119,9 @@
 .hazteuna {
   padding: 5px auto;
   text-align: center;
-  font-size: 1.5em;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  font-size: 1.2em;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .subtitulo {
@@ -153,8 +158,4 @@ ul {
 
 ul li {
   margin-bottom: 10%;
-}
-
-.online {
-  color: red;
 }
