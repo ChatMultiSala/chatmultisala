@@ -18,7 +18,6 @@ import {
   NgForm,
   Validators
 } from '@angular/forms'
-import { TemasService } from '../temas.service';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +33,6 @@ export class LoginComponent implements OnInit {
     private fireAuth: Auth,
     private router: Router,
     private confirmationService: ConfirmationService,
-    private temasService: TemasService
   ) {}
 
   ngOnInit (): void {}
