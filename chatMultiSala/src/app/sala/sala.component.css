@@ -26,7 +26,16 @@
   font-size: 5em;
   font-weight: 600;
   text-align: center;
-  color: #fff
+  color: #fff;
+  margin-bottom: 10%;
+}
+
+.titulo2 {
+  margin-top: 5%;
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  color: #000
 }
 
 .titulosala {
@@ -35,8 +44,6 @@
 }
 
 /*NOMBRES DE LAS SALAS*/
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -46,6 +53,23 @@
 
 .columna1 {
   background: #252839;
+}
+
+.columna2 {}
+
+.columna3 {}
+
+.conectados {
+  background-color: darkcyan;
+  height: 30%;
+  border: 3px solid #000;
+  margin-bottom: 2%;
+}
+
+.chat {
+  background-color: antiquewhite;
+  height: 70%;
+  border: 3px solid #000;
 }
 
 ul {
@@ -61,7 +85,7 @@ ul li {
 }
 
 ul li a {
-  font-size: 3em;
+  font-size: 2em;
   text-decoration: none;
   letter-spacing: 2px;
   line-height: 1em;

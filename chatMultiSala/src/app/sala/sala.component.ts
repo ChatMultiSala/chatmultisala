@@ -18,8 +18,11 @@ import { NgModule } from '@angular/core'
 export class SalaComponent implements OnInit {
   sala: ISala = {
     id: '',
-    nombre: ''
+    nombre: '',
+    style:""
   }
+
+  relleno: string[]=["&nbsp;ADMINISTRACIÓN", "&nbsp;EDUCACIÓN", "&nbsp;SANIDAD", "&nbsp;SERVICIOS"];
 
   salas: ISala[] = []
   mensaje: IMensaje = {
