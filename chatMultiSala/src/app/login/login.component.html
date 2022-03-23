@@ -26,18 +26,17 @@
       </div>
 
       <div class="gradient-border">
-        <div class="form-body">
-
-          <div class="form-floating mb-3 justifier1">
+        <div class="form-body row g-2">
+          <div class="form-floating col-md">
             <input type="email" [(ngModel)]="user" class="form-control" id="floatingInput" placeholder="name@example.com" required>
             <label for="floatingInput">Email</label>
           </div>
 
-          <div class="form-floating justifier2">
+          <div class="form-floating col-md">
             <input type="password" [(ngModel)]="password" class="form-control" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
           </div>
-
+        </div>
           <!-- <mat-form-field class="justifier1">
                 <input matInput placeholder="Email" type="email" [(ngModel)]="user" class="form-input" name="email" required>
                  </mat-form-field>
@@ -57,9 +56,10 @@
             </button>
         </div>
 
-      <div class="additional-link formu2"><br><br>
-      <p>¿Aún no tienes cuenta? ¡Create una!</p>
+      <div class="additional-link formu2">
+      <p class="hazteuna">¿Aún no tienes cuenta? ¡Create una!</p>
 
+      <div class="row g-2">
       <div class="form-floating mb-3 justifier1">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="newUser" [(ngModel)]="newUser" required>
         <label for="floatingInput">Email</label>
@@ -69,6 +69,7 @@
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="newPassword" [(ngModel)]="newPassword" required>
         <label for="floatingPassword">Password</label>
       </div>
+    </div>
 
       <!--   <mat-form-field class="justifier1">
           <input matInput placeholder="Email" type="text" id="email1" class="form-input" name="newUser" [(ngModel)]="newUser" required/>
