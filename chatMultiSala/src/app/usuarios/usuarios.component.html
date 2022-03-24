@@ -1,14 +1,11 @@
 <div class="row">
   <div class="col">
-    <table class="table">
-        <tr *ngFor="let usuario of usuarios" >
-          <!--<td [class.online]="usuario.online">{{ usuario.email  }}</td>-->
-         <td [ngClass]="{
+      <ul>
+        <li *ngFor="let usuario of usuarios" [ngClass]="{
           'login':usuario.online,
           'logout': !usuario.online
-        }">{{ usuario.email  }}</td>
+        }">{{ usuario.email  }}</li>
+      </ul>
 
-        </tr>
-    </table>
   </div>
 </div>
