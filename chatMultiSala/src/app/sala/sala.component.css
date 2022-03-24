@@ -23,7 +23,7 @@
 
 .titulo {
   margin-top: 5%;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 600;
   text-align: center;
   color: #fff;
@@ -32,7 +32,7 @@
 
 .titulo2 {
   margin-top: 5%;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600;
   text-align: center;
   color: #000;
@@ -53,6 +53,7 @@
 
 .columna1 {
   background: #252839;
+  padding: 1%;
 }
 
 .columna2 {
@@ -112,7 +113,6 @@ ul li a:hover::before {
 }
 
 form-inline .logout {
-  position: relative;
   left: 40%;
   right: 40%;
 }
