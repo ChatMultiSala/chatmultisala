@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0px;
 }
 .example-card {
   width: 400px;
@@ -29,11 +30,18 @@ mat-list-item {
   flex: 1 1 auto;
 }
 
-.titulo2 {
-  margin-top: 5%;
-  font-size: 3em;
+.titulochat {
+  margin-top: 2%;
+  font-size: 2em;
   font-weight: 600;
   text-align: center;
   color: #000;
-  background-color: antiquewhite;
+}
+
+.bienvenido {
+  font-size: 1.5em;
+}
+
+h2 {
+  margin: 0 0 0px;
 }
