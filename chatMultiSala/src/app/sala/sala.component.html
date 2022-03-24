@@ -23,7 +23,7 @@
 
       <mat-nav-list>
       <h1 class="titulosala">{{sala.nombre | uppercase }}</h1>
-      <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
+      <mat-list-item  *ngFor="let mensaje of mensajes"> {{mensaje.usuario}}: {{mensaje.texto}}</mat-list-item>
       </mat-nav-list>
 
       <div class="row">
