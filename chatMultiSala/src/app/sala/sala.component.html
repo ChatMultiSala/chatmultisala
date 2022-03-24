@@ -1,12 +1,5 @@
 <div class="container">
   <div class="row">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" title="Cerrar sesión" (click)="logout()">Cerrar sesión</button>
-      </form>
-  </nav>
-  </div>
-  <div class="row">
     <div class="col-4 columna1">
 
       <h2 class="titulo">SALAS</h2>
@@ -27,10 +20,31 @@
     </div>
 
     <div class="col-4 columna2">
+
       <mat-nav-list>
       <h1 class="titulosala">{{sala.nombre | uppercase }}</h1>
       <mat-list-item  *ngFor="let mensaje of mensajes">  {{mensaje.texto}}</mat-list-item>
       </mat-nav-list>
+
+      <div class="row">
+        <div class="col-md">
+        <!-- Botón Cerrar sesión-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" title="Cerrar sesión" (click)="logout()">Cerrar sesión</button>
+        </form>
+        </nav>
+        </div>
+
+        <div class="col-md">
+        <form>
+          <input id="dark-mode" class="toggle2" type="checkbox" name="Dark mode" role="switch" value="on">
+         <label for="dark-mode" class="sr">Dark Mode</label>
+          <div class="curtain"></div>
+        </form>
+        </div>
+
+      </div>
     </div>
 
     <div class="col-4 columna3">
