@@ -1,25 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-4 columna1">
+    <div class="col-12 col-md-4 columna1">
 
       <h2 class="titulo">SALAS</h2>
-     <!--  <mat-nav-list class="">
-      <mat-list-item mat-list-item  (click)="getMensajes(sala)" *ngFor="let sala of salas"  class="salas"> {{sala.nombre  | uppercase}}</mat-list-item>
-      </mat-nav-list><br> -->
-
       <ul>
         <li *ngFor="let sala of salas; item in relleno" (click)="getMensajes(sala)" class="" [style]="sala.style">
-        <a data-text ="item" >&nbsp;{{sala.nombre}}&nbsp;</a>
+        <a data-text ="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<" >&nbsp;{{sala.nombre}}&nbsp;</a>
         </li>
-
-        <li (click)="getMensajes(sala)" class="" style="--clr:#dc00d4">
-        <a href="#" data-text="&nbsp;BIENVENIDA">&nbsp;BIENVENIDA&nbsp;</a></li>
-        <li (click)="getMensajes(sala)" class="" style="--clr:#00ade1">
-        <a href="#" data-text="&nbsp;ARQUITECTURA">&nbsp;ARQUITECTURA&nbsp;</a></li>
       </ul>
     </div>
 
-    <div class="col-4 columna2">
+    <div class="col-12  col-md-4 columna2">
 
       <mat-nav-list>
       <h1 class="titulosala">{{sala.nombre | uppercase }}</h1>
@@ -48,7 +39,7 @@
       </div>
     </div>
 
-    <div class="col-4 columna3">
+    <div class="col-12  col-md-4 columna3">
       <div class="conectados">
         <h1 class="titulo2" >Usuarios conectados</h1>
         <app-usuarios></app-usuarios>
