@@ -40,28 +40,19 @@ body {
 .form-body {
   padding: 0 18px;
 }
-.justifier1 {
-  width: 40%;
-  margin-left: 5%;
-}
-.justifier2 {
-  width: 40%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
+
 .form-input {
   margin-top: 18px;
 }
 
 /** form footer **/
 .form-footer {
-  display: block;
   width: 100%∫;
 }
 .btn {
-  width: 48%;
+  width: 100%;
   padding: 3% !important;
-  font-size: 1.5em;
+  font-size: 0.8em;
   font-weight: 200;
   margin-top: 15px;
 }
@@ -84,17 +75,19 @@ body {
 }
 
 .google-icon {
-  width: 10%;
+  width: 8%;
 }
 .txt {
   text-align: center;
   color: #333;
   margin: 10px auto !important;
 }
-.additional-link {
-  padding: 10px auto;
+.hazteuna {
+  padding: 5px auto;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.2em;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .subtitulo {
   font-size: 1.5em;
@@ -111,17 +104,6 @@ body {
   resize: both;
   background: #ffffff;
   border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
-}
-
-/* Cards cambio de tema */
-.card {
-  background-color: var(--surface-card);
-  padding: 1.5rem;
-  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  margin: 2rem;
 }
 
 .centered {
