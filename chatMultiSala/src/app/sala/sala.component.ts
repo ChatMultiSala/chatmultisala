@@ -21,11 +21,16 @@ export class SalaComponent implements OnInit {
   sala: ISala = {
     id: '',
     nombre: '',
-    style:""
+    style: ''
   }
   usuario!: User
 
-  relleno: string[]=["&nbsp;ADMINISTRACIÓN", "&nbsp;EDUCACIÓN", "&nbsp;SANIDAD", "&nbsp;SERVICIOS"];
+  relleno: string[] = [
+    '&nbsp;ADMINISTRACIÓN',
+    '&nbsp;EDUCACIÓN',
+    '&nbsp;SANIDAD',
+    '&nbsp;SERVICIOS'
+  ]
 
   salas: ISala[] = []
   mensaje: IMensaje = {
@@ -55,7 +60,7 @@ export class SalaComponent implements OnInit {
   getSalas () {
     this.salasService.getSalas().subscribe((salas: ISala[]) => {
       this.salas = salas
-      console.log(salas)
+      this.getMensajes(salas[0])
     })
   }
   getMensajes (sala: ISala) {
