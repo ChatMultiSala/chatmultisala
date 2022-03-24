@@ -126,3 +126,14 @@ form-inline .logout {
   color:blueviolet;
   float: right;
 }
+ .botones {
+   margin-top: 10%;
+ }
+
+ .out {
+   border: 2px solid #000;
+   position: relative;
+   left: 40%;
+   right: 40%;
+   padding: 3px;
+ }

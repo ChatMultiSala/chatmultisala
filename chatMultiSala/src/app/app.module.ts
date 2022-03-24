@@ -22,6 +22,7 @@ import { SalaComponent } from './sala/sala.component'
 import { ConfirmationService } from 'primeng/api'
 import { MatDividerModule } from '@angular/material/divider';
 import { UsuariosComponent } from './usuarios/usuarios.component'
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SalaComponent, ChatComponent, UsuariosComponent],
@@ -38,6 +39,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component'
     AppRoutingModule,
     MatDividerModule,
     MatToolbarModule,
+    ScrollingModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth())
