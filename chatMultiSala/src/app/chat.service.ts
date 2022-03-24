@@ -8,6 +8,7 @@ import {
   where,
   query
 } from '@angular/fire/firestore'
+import { orderBy } from 'firebase/firestore'
 import { Observable } from 'rxjs'
 import { IMensaje } from './sala/mensaje.interface'
 import { ISala } from './sala/salas.interface'
@@ -32,7 +33,10 @@ export class ChatService {
     const mensajes = collection(this.firestore, 'mensajes')
     console.log(mensajes)
     const mensajeSala = query(mensajes, where('idSala', '==', idSala))
-    return collectionData(mensajeSala, { idField: 'id' }) as Observable<
+    console.log(mensajeSala)
+    const ordenados = query(mensajeSala, orderBy('fechaHora', 'desc'));
+    console.log(ordenados)
+    return collectionData(ordenados, { idField: 'id' }) as Observable<
       IMensaje[]
     >
   }

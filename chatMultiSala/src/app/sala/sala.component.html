@@ -12,19 +12,19 @@
 
     <div class="col-12  col-md-4 columna2">
 
-      <mat-nav-list>
       <h2 class="titulosala">{{sala.nombre | uppercase }}</h2>
+
+      <!--<mat-nav-list>
       <mat-list-item  *ngFor="let mensaje of mensajes">
-       <!--  <div
-        mat-card-avatar
-        class="example-header-image"
-        [style.background-image]="'url(' + usuario?.photoURL + ')'"
-      ></div> -->
+      {{mensaje.usuario}}<br>: {{mensaje.texto}} </mat-list-item>
+      </mat-nav-list> -->
 
-<!--       {{mensaje.avatar}}: -->
-
-      {{mensaje.usuario}}<br>: {{mensaje.texto}}</mat-list-item>
-      </mat-nav-list>
+      <ul>
+        <li *ngFor="let mensaje of mensajes">
+          <img [src]="mensaje.avatar?mensaje.avatar:'./assets/noavatar.png'" class="imgmsj">
+          <span class="usuariomsj"> {{mensaje.usuario}}<br></span>
+          <span class="textomsj"> {{mensaje.texto}}</span>
+       </ul>
 
       <div class="row">
         <div class="col-md">

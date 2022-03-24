@@ -115,3 +115,14 @@ form-inline .logout {
   left: 40%;
   right: 40%;
 }
+
+.imgmsj {
+  width: 30px;
+  height: 30px;
+}
+
+.textomsj {
+  font-size: 1.2em;
+  color:blueviolet;
+  float: right;
+}
