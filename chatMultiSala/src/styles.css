@@ -102,6 +102,7 @@ form mode {
 .toggle:before, .toggle:after {
 	border-radius: 50%;
 	content: "";
+  background-color: blue;
 	display: block;
 	top: 0.25em;
 	left: 0.25em;
@@ -111,6 +112,7 @@ form mode {
 .toggle2:before, .toggle2:after {
 	border-radius: 50%;
 	content: "";
+  background-color: blue;
 	display: block;
 	top: 0.25em;
 	left: 0.25em;

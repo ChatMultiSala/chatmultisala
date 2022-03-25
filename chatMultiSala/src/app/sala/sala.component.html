@@ -14,12 +14,14 @@
 
       <h2 class="titulosala">Estas en: {{sala.nombre | uppercase }}</h2>
 
-      <ul>
-        <li *ngFor="let mensaje of mensajes">
+      <div class="overflow-auto altura">
+        <div *ngFor="let mensaje of mensajes" class="mensajes">
           <img [src]="mensaje.avatar?mensaje.avatar:'./assets/noavatar.png'" class="imgmsj">
           <span class="usuariomsj"> {{mensaje.usuario}}<br></span>
+          <span class="usuariotime">{{ mensaje.fechaHora.seconds * 1000 | date: 'dd/MM/yyyy HH:mm' }}<br></span>
           <span class="textomsj"> {{mensaje.texto}}</span>
-        </ul>
+        </div>
+      </div>
 
     </div>
 
@@ -27,30 +29,31 @@
       <div class="conectados">
         <h2 class="titulo2" >Usuarios conectados</h2>
         <app-usuarios></app-usuarios>
+      </div>
+
+      <div class="chat">
+        <app-chat></app-chat>
         <div class="row botones">
           <div class="col-md">
           <!-- Botón Cerrar sesión-->
           <nav class=" ">
           <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-danger out" type="submit" title="Cerrar sesión" (click)="logout()">Cerrar sesión</button>
+          <button class="btn btn-danger out" type="submit" title="Cerrar sesión" (click)="logout()">Cerrar sesión</button>
           </form>
           </nav>
           </div>
 
           <div class="col-md">
           <!-- Botón modo oscuro-->
+          <p class="textoboton">Cambiar modo</p>
           <form>
             <input id="dark-mode" class="toggle2" type="checkbox" name="Dark mode" role="switch" value="on">
-           <label for="dark-mode" class="sr">Dark Mode</label>
+            <label for="dark-mode" class="sr">Dark Mode</label>
             <div class="curtain"></div>
           </form>
           </div>
 
         </div>
-      </div>
-
-      <div class="chat">
-        <app-chat></app-chat>
       </div>
     </div>
   </div>

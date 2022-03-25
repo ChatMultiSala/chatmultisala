@@ -59,6 +59,12 @@
 .columna2 {
   background-color: bisque;
   padding: 1%;
+  height: 100%;
+}
+
+.altura {
+  min-height: 600px;
+  max-height: 600px;
 }
 
 .conectados {
@@ -124,7 +130,7 @@ form-inline .logout {
 .textomsj {
   font-size: 1.2em;
   color:blueviolet;
-  float: right;
+  text-align: right;
 }
  .botones {
    margin-top: 10%;
@@ -133,7 +139,25 @@ form-inline .logout {
  .out {
    border: 2px solid #000;
    position: relative;
-   left: 40%;
+   left: 20%;
    right: 40%;
    padding: 3px;
  }
+
+ .usuariotime {
+   font-size: 0.8em;
+ }
+
+ .mensajes {
+   padding-bottom: 15px;
+   padding-top: 15px;
+ }
+
+ .textoboton {
+  align-items: center;
+}
+
+.col-md {
+  display: flex;
+  align-items: center;
+}
