@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -10,156 +15,221 @@ body {
 
 /* BOTÓN MODO OSCURO */
 :root {
-	--dur: 0.3s;
+  --dur: 0.3s;
 }
-body, input {
-	color: hsl(0,0%,10%);
+
+body,
+input {
+  color: hsl(0, 0%, 10%);
 }
-form mode, .toggle:before, .toggle:after {
-	background: hsl(0,0%,90%);
+
+form mode,
+.toggle:before,
+.toggle:after {
+  background: hsl(0, 0%, 90%);
 }
-form mode, .toggle2:before, .toggle2:after {
-	background: hsl(0,0%,90%);
+
+form mode,
+.toggle2:before,
+.toggle2:after {
+  background: hsl(0, 0%, 90%);
 }
-form mode, .toggle {
-	position: relative;
+
+form mode,
+.toggle {
+  position: relative;
   top: 50%
 }
-form mode, .toggle2 {
-	position: relative;
+
+form mode,
+.toggle2 {
+  position: relative;
   left: 45%;
   right: 45%
 }
+
 form mode {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.curtain, .sr, .toggle:before, .toggle:after {
-	position: absolute;
+
+.curtain,
+.sr,
+.toggle:before,
+.toggle:after {
+  position: absolute;
 }
-.curtain, .sr, .toggle2:before, .toggle2:after {
-	position: absolute;
+
+.curtain,
+.sr,
+.toggle2:before,
+.toggle2:after {
+  position: absolute;
 }
-.curtain, .toggle:before, .toggle:after {
-	transition: transform var(--dur);
+
+.curtain,
+.toggle:before,
+.toggle:after {
+  transition: transform var(--dur);
 }
-.curtain, .toggle2:before, .toggle2:after {
-	transition: transform var(--dur);
+
+.curtain,
+.toggle2:before,
+.toggle2:after {
+  transition: transform var(--dur);
 }
-.curtain, .toggle:before, .toggle:checked:after  {
-	transition-timing-function: ease-out;
-}
-.curtain, .toggle2:before, .toggle2:checked:after  {
-	transition-timing-function: ease-out;
-}
-.curtain, .sr {
-	top: 0;
-	left: 0;
-}
-.curtain {
-	background: hsl(0,0%,100%);
-	mix-blend-mode: difference;
-	pointer-events: none;
-	width: 100%;
-	height: 100%;
-	transform: scaleX(0);
-	transform-origin: 0 50%;
-}
-.sr, .toggle {
-	overflow: hidden;
-}
-.sr, .toggle2 {
-	overflow: hidden;
-}
-.sr {
-	clip: rect(1px,1px,1px,1px);
-	color: transparent;
-	width: 1px;
-	height: 1px;
-}
-.toggle {
-	background: currentColor;
-	border-radius: 0.75em;
-	cursor: pointer;
-	width: 3em;
-	height: 1.5em;
-	-webkit-appearance: none;
-	appearance: none;
-	-webkit-tap-highlight-color: transparent;
-}
-.toggle2 {
-	background: currentColor;
-	border-radius: 0.75em;
-	cursor: pointer;
-	width: 3em;
-	height: 1.5em;
-	-webkit-appearance: none;
-	appearance: none;
-	-webkit-tap-highlight-color: transparent;
-}
-.toggle:before, .toggle:after {
-	border-radius: 50%;
-	content: "";
-  background-color: blue;
-	display: block;
-	top: 0.25em;
-	left: 0.25em;
-	width: 1em;
-	height: 1em;
-}
-.toggle2:before, .toggle2:after {
-	border-radius: 50%;
-	content: "";
-  background-color: blue;
-	display: block;
-	top: 0.25em;
-	left: 0.25em;
-	width: 1em;
-	height: 1em;
-}
-.toggle:before, .toggle:checked:after {
-	transition-delay: 0s;
-}
-.toggle2:before, .toggle2:checked:after {
-	transition-delay: 0s;
-}
-.toggle:checked:before, .toggle:after {
-	transition-delay: calc(var(--dur) * 0.75);
-	transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
-}
-.toggle2:checked:before, .toggle2:after {
-	transition-delay: calc(var(--dur) * 0.75);
-	transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
-}
-.toggle:before {
-	transform: translateX(-1.5em);
-}
-.toggle2:before {
-	transform: translateX(-1.5em);
-}
-.toggle:checked:before {
-	transform: translateX(1.5em);
-}
-.toggle2:checked:before {
-	transform: translateX(1.5em);
-}
+
+.curtain,
+.toggle:before,
 .toggle:checked:after {
-	transform: translateX(3em);
+  transition-timing-function: ease-out;
 }
+
+.curtain,
+.toggle2:before,
 .toggle2:checked:after {
-	transform: translateX(3em);
+  transition-timing-function: ease-out;
 }
-.toggle:checked ~ .curtain {
-	transform: scaleX(1);
+
+.curtain,
+.sr {
+  top: 0;
+  left: 0;
 }
-.toggle2:checked ~ .curtain {
-	transform: scaleX(1);
+
+.curtain {
+  background: hsl(0, 0%, 100%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
 }
+
+.sr,
+.toggle {
+  overflow: hidden;
+}
+
+.sr,
+.toggle2 {
+  overflow: hidden;
+}
+
+.sr {
+  clip: rect(1px, 1px, 1px, 1px);
+  color: transparent;
+  width: 1px;
+  height: 1px;
+}
+
+.toggle {
+  background: currentColor;
+  border-radius: 0.75em;
+  cursor: pointer;
+  width: 3em;
+  height: 1.5em;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle2 {
+  background: currentColor;
+  border-radius: 0.75em;
+  cursor: pointer;
+  width: 3em;
+  height: 1.5em;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle:before,
+.toggle:after {
+  border-radius: 50%;
+  content: "";
+  background-color: blue;
+  display: block;
+  top: 0.25em;
+  left: 0.25em;
+  width: 1em;
+  height: 1em;
+}
+
+.toggle2:before,
+.toggle2:after {
+  border-radius: 50%;
+  content: "";
+  background-color: blue;
+  display: block;
+  top: 0.25em;
+  left: 0.25em;
+  width: 1em;
+  height: 1em;
+}
+
+.toggle:before,
+.toggle:checked:after {
+  transition-delay: 0s;
+}
+
+.toggle2:before,
+.toggle2:checked:after {
+  transition-delay: 0s;
+}
+
+.toggle:checked:before,
+.toggle:after {
+  transition-delay: calc(var(--dur) * 0.75);
+  transition-timing-function: cubic-bezier(0.3, 1.6, 0.5, 0.7);
+}
+
+.toggle2:checked:before,
+.toggle2:after {
+  transition-delay: calc(var(--dur) * 0.75);
+  transition-timing-function: cubic-bezier(0.3, 1.6, 0.5, 0.7);
+}
+
+.toggle:before {
+  transform: translateX(-1.5em);
+}
+
+.toggle2:before {
+  transform: translateX(-1.5em);
+}
+
+.toggle:checked:before {
+  transform: translateX(1.5em);
+}
+
+.toggle2:checked:before {
+  transform: translateX(1.5em);
+}
+
+.toggle:checked:after {
+  transform: translateX(3em);
+}
+
+.toggle2:checked:after {
+  transform: translateX(3em);
+}
+
+.toggle:checked~.curtain {
+  transform: scaleX(1);
+}
+
+.toggle2:checked~.curtain {
+  transform: scaleX(1);
+}
+
 .toggle:focus {
-	outline: transparent;
+  outline: transparent;
 }
+
 .toggle2:focus {
-	outline: transparent;
+  outline: transparent;
 }

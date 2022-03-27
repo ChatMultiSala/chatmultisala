@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-      <ul>
+      <ul class="overflow-auto">
         <li *ngFor="let usuario of usuarios" [ngClass]="{
           'login':usuario.online,
           'logout': !usuario.online

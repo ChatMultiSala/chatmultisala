@@ -1,17 +1,16 @@
 <div class="container-fluid">
   <div class="row">
 
-    <form class="mode">
-      <input id="dark-mode" class="toggle" type="checkbox" name="Dark mode" role="switch" value="on">
-      <label for="dark-mode" class="sr">Dark Mode</label>
-      <div class="curtain"></div>
-    </form>
-
-    <div class="col-2 columna1">
+    <div class="col-2 .d-none .d-sm-block columna1">
      </div>
 
-    <div class="col-8">
+    <div class="col-12 col-md-8">
         <img src="./assets//logo2.png"  class="main-lock-icon" alt="">
+        <form class="mode center">
+          <input id="dark-mode" class="toggle" type="checkbox" name="Dark mode" role="switch" value="on">
+          <label for="dark-mode" class="sr">Dark Mode</label>
+          <div class="curtain"></div>
+        </form>
 
       <div class="gradient-border">
         <div class="form-body row g-2">
@@ -27,13 +26,13 @@
         </div>
 
         <div class="form-footer row g-2">
-          <div class="col-md">
+          <div class="col-6">
             <button type="submit" mat-raised-button class="btn custom-btn" (click)= "login()"  >
                 <mat-icon>input</mat-icon> Login
             </button>
             </div>
-              <br><br>O
-          <div class="col-md">
+
+          <div class="col-6">
             <button type="submit" mat-raised-button class="btn custom-btn3" (click)="loginGoogle()">
             <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="google-icon"> Login con Google
             </button>
@@ -61,7 +60,7 @@
       </div>
     </div>
 
-    <div class="col-2">
+    <div class="col-2 .d-none .d-sm-block">
     </div>
   </div>
 </div>

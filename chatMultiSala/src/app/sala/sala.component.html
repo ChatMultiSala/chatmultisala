@@ -1,19 +1,28 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-12 col-md-4 columna1">
 
-      <h2 class="titulo">SALAS</h2>
-      <ul>
+    <!-- CABECERA EN MÓVIL-->
+    <div class="col-12 row cabeceramov">
+      <button *ngFor="let sala of salas" (click)="getMensajes(sala)" class="col-4 cabeceraitem">
+        <a>{{sala.nombre}}</a>
+      </button>
+    </div>
+    <!-- FIN DE CABECERA MÓVIL -->
+
+    <!-- COLUMNA 1 EN ESCRITORIO-->
+    <div class="col-12 col-md-4 columna1 nomov">
+      <h2 class="titulo nomov">SALAS</h2>
+      <ul class="nomov">
         <li *ngFor="let sala of salas; item in relleno" (click)="getMensajes(sala)" class="" [style]="sala.style">
         <a data-text ="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#11013;" >&nbsp;{{sala.nombre}}&nbsp;</a>
         </li>
       </ul>
+
     </div>
 
+    <!-- COLUMNA 2 EN ESCRITORIO -->
     <div class="col-12  col-md-4 columna2">
-
       <h2 class="titulosala">Estas en: {{sala.nombre | uppercase }}</h2>
-
       <div class="overflow-auto altura">
         <div *ngFor="let mensaje of mensajes" class="mensajes">
           <img [src]="mensaje.avatar?mensaje.avatar:'./assets/noavatar.png'" class="imgmsj">
@@ -22,42 +31,47 @@
           <span class="textomsj"> {{mensaje.texto}}</span>
         </div>
       </div>
-
     </div>
 
-    <div class="col-12  col-md-4 columna3">
-      <div class="overflow-auto conectados">
+    <!-- COLUMNA 3 EN ESCRITORIO -->
+    <div class="col-12  col-md-4 columna3 nomov">
+
+      <!-- USUARIOS CONECTADOS -->
+      <div class="conectados nomov">
         <h2 class="titulo2" >Usuarios conectados</h2>
         <app-usuarios></app-usuarios>
       </div>
 
+      <!-- CHAT (ESCRIBIR Y MANDAR MENSAJE) -->
       <div class="chat">
-        <app-chat></app-chat>
-        <div class="row botones">
-          <div class="col-md">
-          <!-- Botón Cerrar sesión-->
-          <nav class=" ">
-          <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-danger out" type="submit" title="Cerrar sesión" (click)="logout()">Cerrar sesión</button>
-          </form>
-          </nav>
+        <app-chat class="chat escribir"></app-chat>
+
+        <!-- Botones logout y tema -->
+        <div class="row botones nomov">
+          <div class="col-5">
+            <!-- Botón Cerrar sesión-->
+            <form class="form-inline my-2 my-lg-0 ">
+            <button class="btn btn-danger out" type="submit" title="Cerrar sesión" (click)="logout()">Cerrar sesión</button>
+            </form>
           </div>
 
-          <div class="col-md">
-          <!-- Botón modo oscuro-->
-          <p class="textoboton">Cambiar modo</p>
-          <form>
+          <div class="col-7">
+            <!-- Botón modo oscuro-->
+            <form>
             <input id="dark-mode" class="toggle2" type="checkbox" name="Dark mode" role="switch" value="on">
             <label for="dark-mode" class="sr">Dark Mode</label>
             <div class="curtain"></div>
-          </form>
+            </form>
           </div>
-
         </div>
+        <!-- Fin de los botones-->
       </div>
     </div>
+
+        <!-- FOOTER EN MÓVIL-->
+        <div class="col-12 row footermov enmov">
+          <app-chat></app-chat>
+        </div>
+        <!-- FIN DE FOOTER MÓVIL -->
+
   </div>
-
-</div>
-
-

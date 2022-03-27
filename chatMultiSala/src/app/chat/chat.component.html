@@ -1,37 +1,25 @@
-<h2 class="titulochat">Chat</h2>
+<div class="chat chat">
+  <h2 class="titulochat nomov">Chat</h2>
+  <h2 class="bienvenido nomov center" style="font-family: Calibri">Bienvenido, {{ usuario?.displayName }}</h2>
 
-<div class="form-container">
-  <h2 class="bienvenido" style="font-family: Calibri">Bienvenido, {{ usuario?.displayName }}</h2>
-</div>
+  <mat-card class="example-card chat">
+      <mat-card-header class="nomov">
+        <div mat-card-avatar class="example-header-image" [style.background-image]="'url(' + usuario?.photoURL + ')'"></div>
+        <mat-card-title>{{ usuario?.displayName }}</mat-card-title>
+        <mat-card-subtitle>{{ usuario?.email }}</mat-card-subtitle>
+      </mat-card-header>
 
-<div class="form-container">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div
-        mat-card-avatar
-        class="example-header-image"
-        [style.background-image]="'url(' + usuario?.photoURL + ')'"
-      ></div>
-      <mat-card-title>{{ usuario?.displayName }}</mat-card-title>
-      <mat-card-subtitle>{{ usuario?.email }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <img mat-card-image src="" />
-    <mat-card-content>
+      <div class="row enmov chat">
+          <div class="col-10">
+          <mat-form-field class="example-full-width">
+          <input matInput placeholder="Escribe tu mensaje y pulsa intro o el botón" (keyup.enter)="enviarMensaje()" [(ngModel)]="textoMensaje"/>
+          </mat-form-field>
+          </div>
 
-    </mat-card-content>
-    <mat-card-actions>
-      <mat-form-field class="example-full-width">
-        <input
-          matInput
-          placeholder="Escribe tu mensaje y pulsa intro o el botón"
-          (keyup.enter)="enviarMensaje()"
-          [(ngModel)]="textoMensaje"
-        />
-      </mat-form-field>
-      <button mat-fab title="Enviar" (click)="enviarMensaje()">
-        <mat-icon>send</mat-icon>
-      </button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+          <div class="col-2">
+          <button mat-fab title="Enviar" (click)="enviarMensaje()">
+          <mat-icon>send</mat-icon>
+          </button>
+          </div>
+        </div>
+    </mat-card>

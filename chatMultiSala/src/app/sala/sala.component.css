@@ -2,15 +2,6 @@
   margin-top: 2%;
 }
 
-/* .salas {
-  margin-top: 8%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px;
-  height: 500px;
-  align-items: center;
-} */
-
 .salas {
   height: 300px;
   color: #fff;
@@ -23,8 +14,8 @@
 
 .titulo {
   margin-top: 5%;
-  font-size: 3em;
-  font-weight: 600;
+  font-size: 2.5em;
+  font-weight: 500;
   text-align: center;
   color: #fff;
   margin-bottom: 10%;
@@ -39,7 +30,7 @@
 }
 
 .titulosala {
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: center;
 }
 
@@ -63,20 +54,20 @@
 }
 
 .altura {
-  min-height: 600px;
-  max-height: 600px;
+  min-height: 640px;
+  max-height: 640px;
 }
 
 .conectados {
   background-color: darkcyan;
-  height: 40%;
+  height: 50%;
   border: 3px solid #000;
 }
 
 .chat {
   background-color: antiquewhite;
-  height: 60%;
-  border: 3px solid #000;
+  height: 50%;
+  border: 2px solid #000;
 }
 
 ul {
@@ -129,35 +120,101 @@ form-inline .logout {
 
 .textomsj {
   font-size: 1.2em;
-  color:blueviolet;
+  color: blueviolet;
   text-align: right;
 }
- .botones {
-   margin-top: 10%;
- }
 
- .out {
-   border: 2px solid #000;
-   position: relative;
-   left: 20%;
-   right: 40%;
-   padding: 3px;
- }
+.botones {
+  margin-top: 10%;
+}
 
- .usuariotime {
-   font-size: 0.8em;
- }
+.out {
+  border: 2px solid #000;
+  position: relative;
+  left: 20%;
+  right: 40%;
+  padding: 3px;
+  margin-bottom: 40px;
+}
 
- .mensajes {
-   padding-bottom: 15px;
-   padding-top: 15px;
- }
+.usuariotime {
+  font-size: 0.8em;
+}
 
- .textoboton {
+.mensajes {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.textoboton {
   align-items: center;
 }
 
 .col-md {
   display: flex;
   align-items: center;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cabeceramov {
+  background-color: coral;
+  height: 10vh;
+  display: flex;
+}
+
+.cabeceraitem {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footermov {
+  height: 15vh;
+  z-index: 1000;
+}
+
+.chat {
+  background-color: cornflowerblue;
+}
+
+.escribir {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .cabeceramov {
+    display: none;
+  }
+
+  .footermov {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nomov {
+    display: none;
+  }
+
+  .columna1 {
+    height: 10vh;
+  }
+
+  .columna2 {
+    height: 75vh;
+  }
+
+  .columna3 {
+    height: 15vh;
+    z-index: 100;
+  }
 }

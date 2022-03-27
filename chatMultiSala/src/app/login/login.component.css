@@ -95,6 +95,10 @@ body {
   color: rgb(42, 125, 219);
 }
 
+.center {
+  text-align: center;
+}
+
 /* Borde interactivo del formulario*/
 .gradient-border {
   font-size: 24px;
@@ -111,3 +115,4 @@ body {
   width: 50%;
   padding: 10px;
 }
+

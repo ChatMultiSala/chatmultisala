@@ -5,7 +5,7 @@
   margin-bottom: 0px;
 }
 .example-card {
-  width: 400px;
+  width: 100%;
 }
 
 .example-header-image {
@@ -30,6 +30,14 @@ mat-list-item {
   flex: 1 1 auto;
 }
 
+.chat {
+  background-color: cornflowerblue;
+}
+
+.center {
+  text-align: center;
+}
+
 .titulochat {
   margin-top: 2%;
   font-size: 2em;
@@ -44,4 +52,15 @@ mat-list-item {
 
 h2 {
   margin: 0 0 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .nomov {
+    display: none;
+  }
+
+  .enmov {
+    height: 100%;
+    width: 100%;
+  }
 }
