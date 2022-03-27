@@ -58,6 +58,11 @@
   max-height: 640px;
 }
 
+.altura2 {
+  min-height: 75vh;
+  max-height: 75vh;
+}
+
 .conectados {
   background-color: darkcyan;
   height: 50%;
@@ -176,6 +181,11 @@ form-inline .logout {
   flex-flow: row wrap;
 }
 
+.bodymov {
+  height: 75vh;
+  z-index: 0;
+}
+
 .footermov {
   height: 15vh;
   z-index: 1000;
@@ -196,6 +206,10 @@ form-inline .logout {
   }
 
   .footermov {
+    display: none;
+  }
+
+  .bodymov {
     display: none;
   }
 }
