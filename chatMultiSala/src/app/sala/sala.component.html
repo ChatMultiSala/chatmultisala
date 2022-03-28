@@ -14,7 +14,7 @@
       <h2 class="titulosala">Estas en: {{sala.nombre | uppercase }}</h2>
       <div class=" altura">
         <div *ngFor="let mensaje of mensajes" class="mensajes">
-          <img [src]="mensaje.avatar?mensaje.avatar:'./assets/noavatar.png'" class="imgmsj">
+          <img [src]="mensaje.avatar?mensaje.avatar:'./assets/noavatar.png'" class="imgmsj" alt="avatar usuario">
           <span class="usuariomsj"> {{mensaje.usuario}}<br></span>
           <span class="usuariotime">{{ mensaje.fechaHora.seconds * 1000 | date: 'dd/MM/yyyy HH:mm' }}<br></span>
           <span class="textomsj"> {{mensaje.texto}}</span>
